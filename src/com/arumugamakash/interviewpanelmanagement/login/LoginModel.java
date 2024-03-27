@@ -36,7 +36,6 @@ public class LoginModel {
 		else {
 			System.out.println(InterViewPanelDatabase.getInstance().viewInterviewerCredentials());
 			if(!InterViewPanelDatabase.getInstance().viewInterviewerCredentials().isEmpty()) {
-				System.out.println("ulla varan");
 				List<Credentials>credentialsList=InterViewPanelDatabase.getInstance().viewInterviewerCredentials();
 				for (Credentials credentials : credentialsList) {
 					if (credentials.getUserName().equals(name) && credentials.getPassword().equals(password)) {
