@@ -29,7 +29,6 @@ public class InterviewerManageModel {
 		InterViewPanelDatabase.getInstance().addInterviewerCredentials(credentials);
 		InterViewPanelDatabase.getInstance().addInterViewerDetails(interviewer);
 	}
-
 	public void showSelectedCandidates() {
 		List<Candidates> selectCandidates = InterViewPanelDatabase.getInstance().showSelectedCandidate();
 		for (Candidates candidates : selectCandidates) {
@@ -39,91 +38,6 @@ public class InterviewerManageModel {
 				System.out.println("No Selected Candidates");
 			}
 		}
-	}
-//	public void selectedCandidate() {
-//		List<Candidates>candidateList=InterViewPanelDatabase.getInstance().showCandidateDetails();
-//		for (Candidates candidates : candidateList) {
-//			if(candidates.getRating()>3.5) {
-//				List<Candidates>selectedCandidate=InterViewPanelDatabase.getInstance().showCandidateDetails();
-//				InterViewPanelDatabase.getInstance().addSelectedCandidates(selectedCandidate);
-//			}
-//		}
-//		
-//	}
-//	public void showSelectedCandidates() {
-//		List<Candidates> candidateList = InterViewPanelDatabase.getInstance().showCandidateDetails();
-//		for (Candidates candidates : candidateList) {
-//			if (candidates.getRating() == 0.0) {
-//				System.out.println("akasj");
-////				new CompanySetupView().onSetupComplete(null);
-//			} else if (candidates.getRating() >= 3.5) {
-//				InterViewPanelDatabase.getInstance().addSelectedCandidates(candidates);
-//				System.out.println("Selected candidateDetails is:" + candidates.getCandidateName());
-////				new CompanySetupView().onSetupComplete(null);
-//			} else {
-//				System.out.println("No selected candidates...");
-////				new CompanySetupView().onSetupComplete(null);
-//			}
-//
-//		}
-//			if (candidates1.getRating() == 0.0) {
-//				System.out.println("akasj");
-//				new CompanySetupView().onSetupComplete(null);
-//			} else if (candidates.getRating() >= 3.5) {
-//				interviewerManageModel.showSelectedCandidates(candidates);
-//				System.out.println("Selected candidateDetails is:" + candidates.getCandidateName());
-//				new CompanySetupView().onSetupComplete(null);
-//			} 
-////				else {
-////				System.out.println("No selected candidates...");
-////				new CompanySetupView().onSetupComplete(null);
-////			}
-//		}
-//	}
-//		InterViewPanelDatabase.getInstance().addSelectedCandidates(candidates);
-//		
+	}		
 }
 
-//	public boolean checkInterviewer(String name) {
-//		List<Interviewer> interviwerList = InterViewPanelDatabase.getInstance().showInterViewersDetails();
-//		for (Interviewer interviewer : interviwerList) {
-//			if (interviewer.getInterviewerName().equals(name)) {
-//				if( interviewer.getStatus().equals("free")) {
-//					interviewer.setStatus("Allocated");
-//					return true;
-//				}
-//				else {
-//					interviewerManageView.showAlart("Interviewer "+name+" is not Free");
-//				}	
-//			}
-//			else {
-//				interviewerManageView.showAlart("Invalid Interviewer");
-//			}
-//		}
-//		return false;
-//	}
-//
-//	public boolean checkCandidate(String name) {
-//		List<Candidates> candidateList = InterViewPanelDatabase.getInstance().showCandidateDetails();
-//		for (Candidates candidates : candidateList) {
-//			if (candidates.getCandidateName().equals(name)) {
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-
-//	public void mappingCandidateDetails(String interviewerName, String CandidateName) {
-//		Map<String, String>mapInterviewerToCandidate=new HashMap();
-//		mapInterviewerToCandidate.put(interviewerName,CandidateName);
-//		InterViewPanelDatabase.getInstance().addMapingCanditatesDetails(mapInterviewerToCandidate);
-//	}
-//	public void showMappingDetails() {
-//		List<Map<String, String>>mapCandidates=InterViewPanelDatabase.getInstance().showMappingCandidatesDetails();
-//		int i=1;
-//		for (Map<String, String> map : mapCandidates) {
-//			for (Map.Entry m:map.entrySet()) {
-//				System.out.println(i+++"."+m.getKey()+"  - "+m.getValue());
-//			}
-//		}
-//	}
