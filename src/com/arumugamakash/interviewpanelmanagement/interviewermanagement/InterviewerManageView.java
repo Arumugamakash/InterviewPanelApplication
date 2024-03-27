@@ -44,58 +44,11 @@ public class InterviewerManageView {
 					"InterViewer Name:" + interviewer.getInterviewerName() + "  -  " + interviewer.getStatus());
 		}
 	}
-
-//	public void mapCandidateInterviewer() {
-////		System.out.println("Enter the InterviewerName");
-////		String interviewerName=sc.nextLine();
-////		if(interviewerManageModel.checkInterviewer(interviewerName)!=null) {
-////			Interviewer interviewer=interviewerManageModel.checkInterviewer(interviewerName);
-////			System.out.println("Enter the CandidateId");
-////			int candidateId=sc.nextInt();
-////			if(interviewerManageModel.checkCandidate(candidateId)) {
-////				interviewer.setStatus("Allocated");
-////			}
-////		}
-//		System.out.println("Enter the CandidateName");
-//		String candidateName = sc.nextLine();
-//		if (interviewerManageModel.checkCandidate(candidateName)) {
-//			System.out.println("Enter the InterviewerName");
-//			String interviewerName = sc.nextLine();
-//			if (interviewerManageModel.checkInterviewer(interviewerName)) {
-//				interviewerManageModel.mappingCandidateDetails(interviewerName,candidateName);
-//			}
-//		}
-//	}
 	public void showAlart(String string) {
 		System.out.println(string);
 	}
 
-//	public void selectedCandidate() {
-//		interviewerManageModel.selectedCandidate();
-//		List<Candidates> selectedCandidate = InterViewPanelDatabase.getInstance().showSelectedCandidate();
-//		System.out.println("\nSelected Candidates\n");
-//		for (Candidates candidates : selectedCandidate) {
-//
-//			System.out.println(candidates.getCandidateName());
-//		}
-//	}
-//	public void selectedCandidate() {
-//		List<Candidates> candidateList = InterViewPanelDatabase.getInstance().showCandidateDetails();
-//		for (Candidates candidates : candidateList) {
-//			if (candidates.getRating() == 0.0) {
-//				System.out.println("akasj");
-//				new CompanySetupView().onSetupComplete(null);
-//			} else if (candidates.getRating() >= 3.5) {
-//				interviewerManageModel.showSelectedCandidates(candidates);
-//				System.out.println("Selected candidateDetails is:" + candidates.getCandidateName());
-//				new CompanySetupView().onSetupComplete(null);
-//			} 
-////				else {
-////				System.out.println("No selected candidates...");
-////				new CompanySetupView().onSetupComplete(null);
-////			}
-//		}
-//	}
+
 	public void selectedcandidate() {
 		interviewerManageModel.showSelectedCandidates();
 	}
