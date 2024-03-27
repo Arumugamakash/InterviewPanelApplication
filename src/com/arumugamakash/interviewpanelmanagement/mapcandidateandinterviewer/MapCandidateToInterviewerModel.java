@@ -32,11 +32,6 @@ public class MapCandidateToInterviewerModel {
 					mapCandidateToInterviewerView.mapCandidateInterviewer();
 				}
 			}
-//			} else {
-//				mapCandidateToInterviewerView.showAlert("Invalid InterviewerName..TryAgain");
-////				mapCandidateToInterviewerView.mapCandidateInterviewer();
-//				checkInterviewer(name);
-//			}
 		}
 		// mapCandidateToInterviewerView.showAlert("Invalid InterviewerName..TryAgain");
 		return false;
@@ -80,17 +75,6 @@ public class MapCandidateToInterviewerModel {
 		InterViewPanelDatabase.getInstance().addMapingCanditatesDetails(mapInterviewerToCandidate);
 //		mapCandidateToInterviewerView.mapCandidateInterviewer();
 	}
-
-//	public void addCandidate() {
-//		System.out.println("Do you want to add Another Candidate to this Interviewer? yes (or) no");
-//		String option = sc.nextLine();
-//		if (("yes").equalsIgnoreCase(option)) {
-//			mapCandidateToInterviewerView.mapCandidateInterviewer();
-//		} else {
-//			new CompanySetupView().onSetupComplete(company);
-//		}
-//	}
-
 	public void showMappingDetails() {
 		List<Map<String, String>> mapCandidates = InterViewPanelDatabase.getInstance().showMappingCandidatesDetails();
 		int i = 1;
