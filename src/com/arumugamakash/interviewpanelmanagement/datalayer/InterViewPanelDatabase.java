@@ -45,10 +45,6 @@ public class InterViewPanelDatabase {
 		}
 		return interViewPanelDatabase;
 	}
-
-//	public boolean addCandidatesDetails(Candidates candidates) {
-//		return candidatesList.add(candidates);
-//	}
 	// -------ADD CREDENTIALS-------//
 	public void addCredentials(Credentials credentials) {
 		this.credentials = credentials;
@@ -68,20 +64,7 @@ public class InterViewPanelDatabase {
 				System.out.println("file");
 				file.createNewFile();
 			}
-//			if (file.length() > 0) {
-//				// verify the length of the file
-//				company = obj.readValue(new File(companyFile), new TypeReference<Company>() {
-//				});
-////				for (Interviewer interviewers : interviewersList) {
-////					if (interviewers.getMailId().equals(interviewer.getMailId()))
-////						return false;
-////				}
-////				interviewersList.add(interviewer);
-//				obj.writeValue(file, company);
-//			} else {
-				obj.writeValue(file, company);
-
-//			}
+			obj.writeValue(file, company);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("dfgh");
@@ -130,38 +113,6 @@ public class InterViewPanelDatabase {
 			System.out.println("dfgh");
 		}
 		return false;
-
-//		boolean hasCandidates = false;
-//		for (Candidates addedCandidate : candidatesList) {
-//			if ((addedCandidate.getCandidateName().equals(candidates.getCandidateName())
-//					&& addedCandidate.getMailId().equals(candidates.getMailId()))) {
-//				hasCandidates = true;
-//				break;
-//			}
-//		}
-//		if (hasCandidates) {
-//			return false;
-//		} else {
-//			candidatesList.add(candidates);
-////			try {
-////				File file = new File(
-////						D:\\Zoho\\InterviewPanelManagement\\src\\com\\arumugamakash\\interviewpanelmanagement\\Json\\assignBook.json");
-////				if (!file.exists()) {
-////					file.createNewFile();
-////					obj.writeValue(file, new ArrayList<Map<String, String>>());
-////				}
-////				List<Map<String, String>> existingAssignBooks = obj.readValue(file, new TypeReference<List<Map<String, String>>>() {
-////				});
-////				existingAssignBooks.add(assign);
-////				obj.writeValue(file, existingAssignBooks);
-////
-////				return true;
-////			} catch (IOException e) {
-////				e.printStackTrace();
-////				return false;
-////			}
-//				return true;
-//		}
 	}
 
 	// -----------SHOW CANDIDATE--------------//
@@ -175,17 +126,6 @@ public class InterViewPanelDatabase {
 		}
 
 	}
-
-//	public List<Book> searchBook(String bookName) {
-//		List<Book> searchResult = new ArrayList<Book>();
-//		for (Book book : bookList) {
-//			if (book.getBookName().contains(bookName)) {
-//				searchResult.add(book);
-//			}
-//		}
-//		return searchResult;
-//	}
-
 	public boolean addInterViewerDetails(Interviewer interviewer) {
 		try {
 			File file = new File(interviewerFile);
@@ -216,26 +156,6 @@ public class InterViewPanelDatabase {
 		return false;
 
 	}
-//		interviewersList.add(interviewer);
-//		for (Interviewer book : interviewersList) {
-//          System.out.println(book.getInterviewerName());
-//		}
-//		boolean hasInterviewer = false;
-//		for (Interviewer addInterviewer : interviewersList) {
-//			if ((addInterviewer.getInterviewerName().equals(interviewer.getInterviewerName())
-//					&& addInterviewer.getMailId().equals(interviewer.getMailId()))) {
-//				hasInterviewer = true;
-//				break;
-//			}
-//		}
-//		if (hasInterviewer) {
-//			return false;
-//		} else {
-//			interviewersList.add(interviewer);
-//			return true;
-//		}
-//	}
-
 	public List<Interviewer> showInterViewersDetails() {
 		try {
 			return interviewersList = obj.readValue(new File(interviewerFile), new TypeReference<List<Interviewer>>() {
@@ -245,16 +165,6 @@ public class InterViewPanelDatabase {
 			return null;
 		}
 	}
-//	public List<Credentials> showCredentialsDetails() {
-//		try {
-//			return credentialsList = obj.readValue(new File(interviewerFile), new TypeReference<List<Credentials>>() {
-//			});
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-//	}
-
 	public void addMapingCanditatesDetails(Map<String, String> mapInterviewerToCandidate) {
 		// mappingCandidatesDetails.add(mapInterviewerToCandidate);
 		try {
@@ -268,61 +178,12 @@ public class InterViewPanelDatabase {
 
 				// obj.writeValue(file, new ArrayList<Map<String, String>>());
 			}
-//			List<Map<String, String>> mappingDetails = obj.readValue(file,
-//					new TypeReference<List<Map<String, String>>>() {
-//					});
 			mappingCandidatesDetails.add(mapInterviewerToCandidate);
 			obj.writeValue(file, mappingCandidatesDetails);
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-//		try {
-//			File file = new File(mappingFile);
-//			if (!file.exists()) {
-//				System.out.println("file");
-//				file.createNewFile();
-//			}
-//			if (file.length() > 0) {
-//				// verify the length of the file
-//				mappingCandidatesDetails = obj.readValue(new File(mappingFile), new TypeReference<List<Map<String , String>>>() {
-//				});
-//				for (Candidates candidates : candidatesList) {
-//					
-//				}
-//				interviewersList.add(interviewer);
-//				obj.writeValue(file, interviewersList);
-//				return true;
-//			} else {
-//				interviewersList.add(interviewer);
-//				obj.writeValue(file, interviewersList);
-//				return true;
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("dfgh");
-//		}
-//		return false;
-//		try {
-//			File file = new File();
-//			if (!file.exists()) {
-//				file.createNewFile();
-//			}
-//			if (file.length() >= 0) {
-//
-//				obj.writeValue(file, new ArrayList<Map<String, String>>());
-//			}
-//			List<Map<String, String>> existingAssignBooks = obj.readValue(file,
-//					new TypeReference<List<Map<String, String>>>() {
-//					});
-//			existingAssignBooks.add(assign);
-//			obj.writeValue(file, existingAssignBooks);
-//
-//			return true;
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//			return false;
-//		}
 	}
 
 	public List<Map<String, String>> showMappingCandidatesDetails() {
@@ -348,14 +209,11 @@ public class InterViewPanelDatabase {
 				// verify the length of the file
 				credentialsList = obj.readValue(new File(credentialsFile), new TypeReference<List<Credentials>>() {
 				});
-//
 				credentialsList.add(credentials);
 				obj.writeValue(file, credentialsList);
-//				return true;
 			} else {
 				credentialsList.add(credentials);
 				obj.writeValue(file, credentialsList);
-//				return true;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -372,10 +230,6 @@ public class InterViewPanelDatabase {
 			return null;
 		}
 	}
-
-//	public void addSelectedCandidates(List<Candidates> selectedCandidate) {
-//		selectedCandidate.addAll(selectedCandidate);
-//	}
 	public List<Candidates> showSelectedCandidate() {
 		return selectedCandidate;
 	}
