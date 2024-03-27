@@ -18,54 +18,6 @@ public class CandidateSetupView {
 		interviewerManageView = new InterviewerManageView();
 
 	}
-
-//	public void onSetupComplete() {
-//
-//		// CandidateSetupView candidateSetupView = new CandidateSetupView();
-//		while (true) {
-//			System.out.println(
-//					"\nApplication Features\n \n 1.Add Candidate Details \n 2.View Candidates \n 3.Add Interviewer Details \n 4.show Interviewer Details\n 5.Map Candidate and Interviewer \n6.ShowMappingDetails \n 8.Selected Candidates \n 9.Exit ");
-//			System.out.println("\nEnter your Choice");
-//			int choice = sc.nextInt();
-//			sc.nextLine();
-//			switch (choice) {
-//			case 1:
-//				getCandidateDetails();
-//				break;
-//			case 2:
-//				showCandidates();
-//				break;
-//			case 3:
-//				interviewerManageView.getInterviewersDetails();
-//				break;
-//			case 4:
-//				interviewerManageView.showInterviewersDetails();
-//				break;
-//			case 5:
-//				interviewerManageView.mapCandidateInterviewer();
-//				break;
-//			case 6:
-//				interviewerManageView.showMappingDetails();
-//				break;
-////				case 6:
-////					bookManagementView.updateBook();
-////				case 7:
-////					userView.deleteUser();
-////					break;
-////				case 8:
-////					userView.viewUsers();
-////					break;
-//			case 9:
-//				System.out.println(
-//						"\n-- Thanks for using " + InterviewPanelManagement.getInstance().getAppName() + " --");
-//				return;
-//			default:
-//				System.out.println("\nPlease Enter valid choice\n");
-//			}
-//		}
-//
-//	}
-
 	public void addCandidateDetails() {
 		try {
 			System.out.println("Enter Candidate Name");
